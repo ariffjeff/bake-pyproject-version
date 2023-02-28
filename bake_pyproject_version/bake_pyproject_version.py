@@ -6,7 +6,7 @@ import os
 import re
 
 
-def main() -> None:
+def bake() -> None:
     PACKAGE_NAME = ''
     POETRY_TOML = 'pyproject.toml'
 
@@ -31,4 +31,4 @@ def main() -> None:
             f.write(text_new)
 
 if(__name__ == "__main__"):
-    main()
+    bake()
