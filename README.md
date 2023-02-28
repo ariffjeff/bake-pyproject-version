@@ -13,6 +13,6 @@ pip install verbake
 
 ## Usage
 ```
-from baker import bake
+from verbake.baker import bake
 bake()
 ```
