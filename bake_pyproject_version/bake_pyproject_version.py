@@ -7,7 +7,7 @@ import re
 
 
 def bake() -> None:
-    PACKAGE_NAME = ''
+    PACKAGE_NAME = input("Package src dir name: ")
     POETRY_TOML = 'pyproject.toml'
 
     # get version from pyproject.toml
