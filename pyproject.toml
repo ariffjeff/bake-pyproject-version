@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bake-pyproject-version"
+version = "0.1.0"
+description = "Overwrite __version__ in a package's __init__.py with the version from pyproject.toml"
+authors = ["Ariff Jeff <ariffjeff@icloud.com>"]
+readme = "README.md"
+packages = [{include = "bake_pyproject_version"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
