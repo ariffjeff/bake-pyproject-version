@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "bake-pyproject-version"
 version = "0.1.1"
+name = "verbake"
 description = "Overwrite __version__ in a package's __init__.py with the version from pyproject.toml"
 authors = ["Ariff Jeff <ariffjeff@icloud.com>"]
 readme = "README.md"
-packages = [{include = "bake_pyproject_version"}]
+packages = [{include = "verbake"}]
 
 [tool.poetry.dependencies]
 python = "^3.7"

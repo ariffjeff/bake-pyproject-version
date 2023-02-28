@@ -13,6 +13,6 @@ pip install bake-pyproject-version
 
 ## Usage
 ```
-from bake_pyproject_version import bake
+from baker import bake
 bake()
 ```
