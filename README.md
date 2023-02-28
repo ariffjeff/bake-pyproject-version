@@ -1,4 +1,4 @@
-# bake-pyproject-version
+# verbake
 
 A simple script that copies the value of `version` from `pyproject.toml` and uses it to overwrite the value of `__version__` in a package's main `__init__.py`.
 
@@ -8,11 +8,11 @@ This also helps avoid an error that occurs when testing your package in remote e
 
 ## Install
 ```
-pip install bake-pyproject-version
+pip install verbake
 ```
 
 ## Usage
 ```
-from bake_pyproject_version import bake
+from baker import bake
 bake()
 ```
