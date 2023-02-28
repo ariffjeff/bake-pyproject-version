@@ -1,6 +1,6 @@
 [tool.poetry]
-version = "0.1.1"
 name = "verbake"
+version = "0.2.0"
 description = "Overwrite __version__ in a package's __init__.py with the version from pyproject.toml"
 authors = ["Ariff Jeff <ariffjeff@icloud.com>"]
 readme = "README.md"
