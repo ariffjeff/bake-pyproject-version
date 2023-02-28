@@ -7,8 +7,11 @@ readme = "README.md"
 packages = [{include = "verbake"}]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.7, <3.12"
 
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^5.8.0"
 
 [build-system]
 requires = ["poetry-core"]
