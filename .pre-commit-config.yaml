@@ -7,7 +7,7 @@ repos:
         entry: ./verbake/baker.py
         language: python
   - repo: https://github.com/ariffjeff/verbake
-    rev: 1.0.0
+    rev: 1.0.1
     hooks:
       - id: verbake
         description: Ensure __version__ in __init__.py matches version in pyproject.toml
