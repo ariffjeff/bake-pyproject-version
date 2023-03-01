@@ -7,6 +7,7 @@
 import os
 import re
 import sys
+from packaging import version as pv
 
 
 def bake() -> None:
@@ -17,7 +18,7 @@ def bake() -> None:
     # ver = subprocess.run(['poetry', 'version', '-s'], capture_output=True, text=True).stdout.rstrip()
     with open(POETRY_TOML, "r") as f:
         text = f.read()
-        ver = re.search('version = "(.*?)"\\n', text).groups()[0] # get version number between 'version = ' and '\n'
+        new_ver = re.search('version = "(.*?)"\\n', text).groups()[0] # get version number between 'version = ' and '\n'
         PACKAGE_NAME = re.search('name = "(.*?)"\\n', text).groups()[0] # get package name between 'name = ' and '\n'
 
     # put version in __init__.py
@@ -30,14 +31,14 @@ def bake() -> None:
         if(not old_ver):
             return
         old_ver = old_ver.groups()[0]
-        text_new = re.sub(pattern, f'__version__ = "{ver}"', text)
+        text_new = re.sub(pattern, f'__version__ = "{new_ver}"', text)
 
-    if(text_new):
+    if(text_new and pv.parse(new_ver) > pv.parse(old_ver)):
         with open(PRJ_INIT, "w") as f:
             f.write(text_new)
         print(f'Updated __version__ in "{PRJ_INIT}" to match {POETRY_TOML}')
         print(f'Old: __version__ = {old_ver}')
-        print(f'New: __version__ = {ver}')
+        print(f'New: __version__ = {new_ver}')
 
     sys.exit(0)
 
