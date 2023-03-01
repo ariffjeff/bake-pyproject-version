@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: verbake
+        name: verbake
+        description: Ensure __version__ in __init__.py matches version in pyproject.toml
+        entry: ./verbake/baker.py
+        language: python
+  - repo: https://github.com/ariffjeff/verbake
+    rev: 0.2.2
+    hooks:
+      - id: verbake
+        description: Ensure __version__ in __init__.py matches version in pyproject.toml
