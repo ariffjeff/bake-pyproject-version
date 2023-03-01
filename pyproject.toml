@@ -8,6 +8,7 @@ packages = [{include = "verbake"}]
 
 [tool.poetry.dependencies]
 python = "^3.8, <3.12"
+packaging = "^23.0"
 
 
 [tool.poetry.group.dev.dependencies]
